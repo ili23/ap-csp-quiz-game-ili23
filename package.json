@@ -1,0 +1,20 @@
+{
+  "name": "ap-csp-quiz-game-ili23",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/staten-island-tech/ap-csp-quiz-game-ili23.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/staten-island-tech/ap-csp-quiz-game-ili23/issues"
+  },
+  "homepage": "https://github.com/staten-island-tech/ap-csp-quiz-game-ili23#readme",
+  "description": ""
+}
