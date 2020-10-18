@@ -1,0 +1,32 @@
+html{
+    font-size: 62.5%;
+    padding: 0rem;
+    margin: 0rem;
+    box-sizing: border-box;   
+}
+
+.homepage {
+    background-color: #413C58;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Press Start 2P';
+    color: #feeafa;
+    font-size: 20;
+}
+
+.start {
+    background-color: #D6DBFF;
+    font-family: 'Press Start 2P';
+    color: #413C58;
+    font-size: 20;
+    height: 10%;
+    width: 15%;
+    border-radius: 20%;
+}
+
+.choice{
+    display: block;
+}

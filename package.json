@@ -16,5 +16,8 @@
     "url": "https://github.com/staten-island-tech/ap-csp-quiz-game-ili23/issues"
   },
   "homepage": "https://github.com/staten-island-tech/ap-csp-quiz-game-ili23#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.27.0"
+  }
 }

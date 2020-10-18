@@ -3,10 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AP Quiz Game</title>
+    <link rel="stylesheet" href="style.scss">
+    <script src="app.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
 </head>
 <body>
-    <script src="app.js"></script>
-    <link rel="stylesheet" href="style.scss">
+    <div class= "homepage">
+        <h1>Nintendo Quiz Game!!!</h1>
+        <h2> Are You Ready?</h2>
+        <button class="start">start!</button>
+    </div>
+    <div class="question">
+        <h1>Insert Question Here</h1> <!--array here-->
+        <div class="answer">
+            <div class="choice">
+                <input type="button" id="choice-1" value="A">
+                <label class="answer-text answer-one" for="choice-1">Choice 1</label> <!--array here-->
+            </div>
+            <div class="choice">
+                <input type="button" id="choice-2" value="B">
+                <label class="answer-text answer-two" for="choice-2">Choice 2</label> <!--array here-->
+            </div>
+            <div class="choice">
+                <input type="button" id="choice-3" value="C">
+                <label class="answer-text answer-three" for="choice-3">Choice 3</label> <!--array here-->
+            </div>
+            <div class="choice">
+                <input type="button" id="choice-4" value="D">
+                <label class="answer-text answer-four" for="choice-4">Choice 4</label> <!--array here-->
+            </div>
+        </div>
+    </div>
 </body>
 </html>
