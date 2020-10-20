@@ -30,3 +30,27 @@ html{
 .choice{
     display: block;
 }
+.question-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 3rem auto;
+    width: 90vw;
+}
+.question{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    padding: 2rem;
+    width: 30vw;
+    border: black;
+    border-style: dotted;
+}
+.answer-text{
+    margin: 2rem;
+}
+.button-box{
+    height:10rem;
+    background-color: black;
+}
