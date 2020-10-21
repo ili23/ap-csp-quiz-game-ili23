@@ -6,49 +6,49 @@ const DOMSelectors = {
 };
 const questionBank = [ 
     {
-        question: "insert data", //Question 1 
-        answerone: "choice1 ",
-        answertwo: "choice2 ",
-        answerthree: "choice3 ",
-        answerfour: "choice4 ",
+        question: "In which game did Mario first get to ride on Yoshi?", //Question 1 
+        answerone: "Super Mario World",
+        answertwo: "Super Mario Bros",
+        answerthree: "Super Mario Bros 3",
+        answerfour: "Super Mario 64",
         name: "1",
-        correctAnswer: "choice3",  //when you change questions/answers just change this too
+        correctAnswer: "Super Mario World",  
     },
     {
-        question: "insert data", //Question 2
-        answerone: "choice1 ",
-        answertwo: "choice2 ",
-        answerthree: "choice3 ",
-        answerfour: "choice4 ",
+        question: "Which insect transformation can Mario power-up with in the super mario galaxy game?", //Question 2
+        answerone: "Lady Bug",
+        answertwo: "Ant",
+        answerthree: "Bee",
+        answerfour: "Stink Bug",
         name: "2",
-        correctAnswer: "choice3",  //when you change questions/answers just change this too
+        correctAnswer: "Stink Bug",  
     },
     {
-        question: "insert data", //Question 3
-        answerone: "choice1 ",
-        answertwo: "choice2 ",
-        answerthree: "choice3 ",
-        answerfour: "choice4 ",
+        question: "Which one is not a power up for Mario?", //Question 3
+        answerone: "Fire Flower",
+        answertwo: " 1-up Mushroom",
+        answerthree: "Magic Hot Dog",
+        answerfour: "Super Star",
         name: "3",
-        correctAnswer: "choice3",  //when you change questions/answers just change this too
+        correctAnswer: "Magic Hot Dog",  
     },
     {
-        question: "insert data", //Question 4
-        answerone: "choice1 ",
-        answertwo: "choice2 ",
-        answerthree: "choice3 ",
-        answerfour: "choice4 ",
+        question: "What is the name of Mario’s racoon-like suit that gives him the ability to glide through the air?", //Question 4
+        answerone: "Tanooki suit",
+        answertwo: "Super suit",
+        answerthree: "Law suit",
+        answerfour: "Bee suit",
         name: "4",
-        correctAnswer: "choice3",  //when you change questions/answers just change this too
+        correctAnswer: "Tanooki Suit", 
     },
     {
-        question: "insert data", //Question 5
-        answerone: "choice1 ",
-        answertwo: "choice2 ",
-        answerthree: "choice3 ",
-        answerfour: "choice4 ",
+        question: "Luigi is Mario’s...?", //Question 5
+        answerone: "dad ",
+        answertwo: "brother",
+        answerthree: "cousin",
+        answerfour: "boyfriend ",
         name: "5",
-        correctAnswer: "choice3",  //when you change questions/answers just change this too
+        correctAnswer: "brother",  //when you change questions/answers just change this too
     },
 ];
 
@@ -59,22 +59,25 @@ function displayQuestions(){
         DOMSelectors.questionBox.insertAdjacentHTML(
           "afterbegin",
           `<div class="question">
-          <h1>${element.question}</h1> 
+          <h1 id="${element.name}">${element.question}</h1> 
           <div class="answer">
               <div class="choice">
                   <input type="radio" id="choice-1" name="${element.name}" value="${element.answerone}">
                   <label class="answer-text answerone" for="choice-1">${element.answerone}</label> 
               </div>
               <div class="choice">
-                  <input type="radio" id="choice-2" name="${element.name}" value="${element.answertwo}">
-                  <label class="answer-text answertwo" for="choice-2">${element.answertwo}</label> 
+              <input type="radio" id="choice-2" name="${element.name}" value="${element.answertwo}">
+              <label class="answer-text answertwo" for="choice-2"> 
+                  ${element.answertwo}</label> 
               </div>
               <div class="choice">
-                  <input type="radio" id="choice-3" name="${element.name}" value="${element.answerthree}">
-                  <label class="answer-text answerthree"  for="choice-3">${element.answerthree}</label> 
+              <input type="radio" id="choice-3" name="${element.name}" value="${element.answerthree}">
+              <label class="answer-text answerthree"  for="choice-3">
+                  ${element.answerthree}</label> 
               <div class="choice">
-                  <input type="radio" id="choice-4" name="${element.name}" value="${element.answerfour}">
-                  <label class="answer-text answerfour" for="choice-4">${element.answerfour}</label> 
+              <input type="radio" id="choice-4" name="${element.name}" value="${element.answerfour}">
+              <label class="answer-text answerfour" for="choice-4">
+                  ${element.answerfour}</label> 
               </div>
           </div>
       </div>`
@@ -82,29 +85,30 @@ function displayQuestions(){
         });   
     });
 };
-/* function displayButton(){
-    DOMSelectors.startButton.addEventListener("click", function(e){
-    document.getElementById("button").insertAdjacentHTML("afterend", 
-    ""); 
-})
-}; */
 
 function checkScore(){
-    let score =0;
-    questionBank.forEach((item)=> {
-    let selectedAnswer = document.querySelector(
-        `input[name="${item.name}"]:checked`
-    );
-     if (selectedAnswer === `${item.correctAnswer}`){
+    const score = 0;
+    questionBank.forEach((element)=> {
+    const selectedAnswer = document.querySelector(
+        `input[name="${element.name}"]:checked`
+        ).value;
+    console.log(selectedAnswer);
+    /*  if (selectedAnswer === `${element.correctAnswer}`){
         score++;
-        document.getElementById(`${item.question}`).style.color = "green";
+        //document.getElementById(`${item.question}`).style.color = "green";
      }else{
-        document.getElementById(`${item.question}`).style.color = "red";
+       // document.getElementById(`${item.question}`).style.color = "red";
      };
-     console.log(score);
+      */
 });
+DOMSelectors.submitButton.addEventListener("click", checkScore);
 };
 
-DOMSelectors.submitButton.addEventListener("click", checkScore);
-displayQuestions();
-checkScore();
+
+
+function init(){
+    displayQuestions();
+    checkScore();
+
+}
+init();
