@@ -2,7 +2,7 @@ html{
     font-size: 62.5%;
     padding: 0rem;
     margin: 0rem;
-    box-sizing: border-box;   
+    box-sizing: border-box;
 }
 
 .homepage {
@@ -52,5 +52,8 @@ html{
 }
 .button-box{
     height:10rem;
-    background-color: black;
+    z-index: -5;
+
+}
+.button{
 }
