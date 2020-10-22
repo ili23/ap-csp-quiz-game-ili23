@@ -2,7 +2,10 @@ const DOMSelectors = {
     questionBox : document.querySelector(".question-section"),
     startButton: document.querySelector(".start"),
     buttonBox : document.querySelector("button-box"),
-    submitButton: document.querySelector(".submit-btn")
+    submitButton: document.querySelector(".submit-btn"),
+    scoreBox: document.querySelector(".score"),
+    resetButton: document.querySelector(".reset-btn"),
+    scoreBoard: document.querySelector(".score-board")
 };
 const questionBank = [ 
     {
@@ -52,8 +55,8 @@ const questionBank = [
     },
 ];
 
-function displayQuestions(){
-    DOMSelectors.startButton.addEventListener("click", function(e){
+function init(){
+const displayQuestions = function () {
     DOMSelectors.questionBox.innerHTML = "";
     questionBank.forEach((element) => {
         DOMSelectors.questionBox.insertAdjacentHTML(
@@ -82,33 +85,27 @@ function displayQuestions(){
           </div>
       </div>`
         );
-        });   
-    });
+    }); 
 };
+DOMSelectors.startButton.addEventListener("click", displayQuestions);  
 
-function checkScore(){
-    const score = 0;
+const checkScore = function (){
+    let score = 0;
     questionBank.forEach((element)=> {
     const selectedAnswer = document.querySelector(
         `input[name="${element.name}"]:checked`
         ).value;
-    console.log(selectedAnswer);
-    /*  if (selectedAnswer === `${element.correctAnswer}`){
+     if (selectedAnswer === `${element.correctAnswer}`){
         score++;
-        //document.getElementById(`${item.question}`).style.color = "green";
+        document.getElementById(`${element.name}`).style.backgroundColor = "green";
      }else{
-       // document.getElementById(`${item.question}`).style.color = "red";
+        document.getElementById(`${element.name}`).style.backgroundColor = "red";
      };
-      */
+     console.log(score);
 });
-DOMSelectors.submitButton.addEventListener("click", checkScore);
+DOMSelectors.scoreBox.insertAdjacentHTML("afterbegin", `<h1 class="score-board">You got ${score} correct!!</h1>`);
 };
-
-
-
-function init(){
-    displayQuestions();
-    checkScore();
-
+DOMSelectors.submitButton.addEventListener("click", checkScore);
 }
+
 init();
