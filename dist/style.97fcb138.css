@@ -1,0 +1,100 @@
+html {
+  font-size: 62.5%;
+  padding: 0rem;
+  margin: 0rem;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #413C58;
+}
+
+.homepage {
+  background-color: #413C58;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Press Start 2P";
+  color: #feeafa;
+  font-size: 2rem;
+}
+
+img {
+  margin-top: 3rem;
+  width: 50vw;
+}
+
+.image-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start {
+  background-color: #D6DBFF;
+  font-family: "Press Start 2P";
+  color: #413C58;
+  font-size: 20;
+  height: 10%;
+  width: 15%;
+  border-radius: 20%;
+}
+
+.choice {
+  display: block;
+}
+
+.question-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 3rem auto;
+  width: 90vw;
+  font-family: "Press Start 2P";
+  font-size: 1rem;
+  color: #feeafa;
+}
+
+.score-board {
+  font-family: "Press Start 2P";
+  color: #feeafa;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem auto;
+  padding: 2rem;
+  width: 60vw;
+  font-size: 0.75rem;
+}
+
+.answer-text {
+  margin: 2rem;
+}
+
+.button-box {
+  height: 10rem;
+  z-index: -5;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.button {
+  background-color: #D6DBFF;
+  font-family: "Press Start 2P";
+  color: #413C58;
+  font-size: 20;
+  height: 20%;
+  border-radius: 20%;
+}
+
+/*# sourceMappingURL=/style.97fcb138.css.map */
